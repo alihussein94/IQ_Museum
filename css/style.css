@@ -8,7 +8,12 @@ body {
 }
 
 #head {
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("../img/Iraqi_Museum.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -17,13 +22,8 @@ nav {
 }
 
 #head .head-container {
-  background-image: url("../img/Iraqi_Museum.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  background-color: black;
   padding-top: 2rem;
 }
 
@@ -46,6 +46,7 @@ nav {
 
 #head div.head-button {
   text-align: center;
+  padding-bottom: 3rem;
 }
 
 #head div.head-button a {
@@ -62,4 +63,330 @@ nav {
 #head div.head-button a:hover {
   background-color: #8c7f66;
   color: #141716;
+}
+
+#pictures {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  justify-content: space-between;
+  grid-gap: 1rem;
+  background-color: #c4c0af;
+  padding: 3% 5%;
+}
+
+#pictures div.pic-container {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  grid-gap: 1rem;
+}
+
+#pictures div.pic-container div.pic div.pic-text {
+  background-color:#fff ;
+  color: #141716 ;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  text-align: center;
+  padding: 20% 5%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transition: all 500ms;
+}
+
+#pictures div.pic-container div.pic:hover div.pic-text {
+  top: 0;
+}
+
+
+#pictures div.pic-container div.pic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#pictures div.pic-container div.pic img {
+  width: 100%;
+  height: 100%;
+}
+
+#pictures div.pic-side  {
+  padding: 5% 5% ;
+}
+
+#pictures div.pic-side div.pic-side-text {
+  color: #8c7f66 ;
+  text-align: right;
+  padding: 5% 5%;
+  border-style: solid none none none;
+  border-width: 10px;
+}
+
+#pictures div.pic-side div.pic-side-text h2 {
+  font-size: 3rem;
+}
+
+#slide-show img.d-block.w-100 {
+  height: 30rem;
+}
+
+#slide-show div.carousel-caption.d-md-block {
+  background-color: #fff;
+  color: #000;
+  width: 50%;
+  height: 20rem;
+  margin: auto;
+  opacity: 0.8;
+  margin-bottom: 5rem;
+  padding: 2rem;
+}
+
+#history-timeline {
+  background-color: #c4c0af;
+  padding-bottom: 4rem;
+
+}
+
+#history-timeline div.timeline {
+  position: relative;
+  padding: 5% 9% ;
+  overflow: hidden;
+}
+
+#history-timeline div.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #8c7f66;
+  top: 3rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+#history-timeline div.timeline div.timeline-head-text {
+  position: absolute;
+  text-align: center;
+  background-color: #c4c0af;
+  color: #8c7f66;
+  border: 10px  #8c7f66;
+  border-style: none none solid none;
+  width: 350px;
+  height: 100px;
+  padding: 10px 25px;
+  top: 3rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -181px;
+  z-index: 2;
+  transition: all 300ms;
+}
+
+#history-timeline div.timeline div.timeline-head-text:hover {
+  background-color: #8c7f66;
+  color: #c4c0af;
+  border: 6px solid #8c7f66;
+  cursor: pointer;
+}
+
+#history-timeline div.timeline div.timeline-head-text h2 {
+  font-size: 3rem;
+}
+
+#history-timeline div.timeline div.timeline-head-margin {
+  height: 7rem;
+}
+
+/* Container around content */
+#history-timeline div.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin-left: 0;
+}
+
+/* The circles on the timeline */
+#history-timeline div.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #8c7f66;
+  top: 19px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#history-timeline div.left {
+  left: 0;
+}
+
+#history-timeline div.right {
+  left: 50%;
+}
+
+#history-timeline div.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+}
+
+#history-timeline div.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+
+#history-timeline div.right::after {
+  left: -12px;
+}
+
+#history-timeline div.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  text-align: right;
+}
+
+#location {
+  background-color: #8c7f66;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 15%;
+}
+
+#location div.location-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#location div.container-text {
+  text-align: right;
+  padding: 5% 8%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+#location div.container-text h2 {
+  color: #fff;
+}
+
+footer {
+  background-color: #141716;
+  padding: 0.2rem;
+}
+
+footer div.footer-text {
+  text-align: center;
+}
+
+footer div.footer-text p{
+  color: #fff;
+  margin: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  #head div.head-text {
+    padding: 4rem 0 2rem ;
+  }
+
+  #head div.head-text h1 {
+    font-size: 6rem;
+  }
+
+  #head div.head-text p {
+    font-size: 1rem;
+    margin: 2rem auto 2rem;
+    width: 70%;
+  }
+
+  #pictures {
+    margin: auto;
+    grid-template-columns:1fr;
+    padding-bottom: 4rem;
+  }
+
+  #pictures div.pic-container {
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #pictures div.pic-container div.pic div.pic-text h3 {
+    font-size: 1rem;
+  }
+
+  #pictures div.pic-side div.pic-side-text {
+    text-align: center;
+  }
+
+  #history-timeline div.timeline::after {
+  left: 31px;
+  }
+
+  #history-timeline div.container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  #history-timeline div.container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  #history-timeline div.left::after, #history-timeline div.right::after {
+  left: -27px;
+  }
+
+  #history-timeline div.right {
+  left: 0%;
+  }
+
+  #history-timeline div.timeline div.timeline-head-text {
+    width: 100%;
+    top: 1rem;
+    left: 0;
+    margin-left: 0;
+  }
+
+  #location {
+    grid-template-columns: 1fr;
+    padding: 0 ;
+  }
+
+  #location div.container-text {
+    text-align: center;
+    padding: 5% 10%;
+  }
+
 }
