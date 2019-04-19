@@ -368,6 +368,10 @@ footer div.footer-text p{
     position: absolute;
   }
 
+  #code-for-iraq:hover {
+    left: -170px;
+  }
+
   #head div.head-text {
     padding: 4rem 0 2rem ;
   }
